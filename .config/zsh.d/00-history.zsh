@@ -1,0 +1,4 @@
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_dups
+setopt hist_reduce_blanks
