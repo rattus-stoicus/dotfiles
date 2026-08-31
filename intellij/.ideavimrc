@@ -1,0 +1,47 @@
+nnoremap \e :e ~/.ideavimrc<CR>
+nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+
+set clipboard+=unnamed
+set clipboard+=ideaput
+
+"" Plugins
+Plug 'tpope/vim-surround'
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
+
+set which-key
+set timeoutlen=8000
+
+"" leader key
+let mapleader=" "
+
+""" Plugin settings
+let g:highlightedyank_highlight_duration = "1000"
+
+""" Splits
+map <Leader>sv <Action>(SplitVertically)
+map <Leader>sh <Action>(SplitHorizontally)
+
+""" Switch between splits
+map <C-h> <c-w>h
+map <C-l> <c-w>l
+map <C-j> <c-w>j
+map<C-k> <c-w>k
+
+map <c-x> :action HideAllWindows<CR>
+map <c-t> :action ActivateTerminalToolWindow<CR>
+
+""" Errors
+map ge <Action>(GotoNextError)
+map gE <Action>(GotoPreviousError)
+map gh <Action>(ShowErrorDescription)
+
+"""
+map <leader>rn <Action>(RenameElement)
+
+""" Keep visual selection
+vnoremap < <gv
+vnoremap > >gv
+
+vmap K :action MoveLineUp<CR>
+vmap J :action MoveLineDown<CR>
